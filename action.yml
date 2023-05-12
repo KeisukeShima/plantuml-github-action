@@ -10,7 +10,7 @@ inputs:
 
 runs:
     using: 'docker'
-    image: 'ghcr.io/keisukeshima/plantuml-github-action'
+    image: 'docker://ghcr.io/keisukeshima/plantuml-github-action'
     args:
       - ${{ inputs.args }}
 
