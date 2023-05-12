@@ -32,7 +32,7 @@ jobs:
     env:
         UML_FILES: ".puml"
     steps:
-      - name: Checkout Source 
+      - name: Checkout Source
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
@@ -64,12 +64,12 @@ jobs:
         with:
             args: -v -tpng ${{ steps.getfile.outputs.files }}
       - name: Push Local Changes
-        uses:  stefanzweifel/git-auto-commit-action@v4.1.2 
-        with: 
+        uses:  stefanzweifel/git-auto-commit-action@v4.1.2
+        with:
           commit_user_name: "my user name"
           commit_user_email: "me@email.org"
           commit_author: "My User <me@email.org>"
-          commit_message: "Generate SVG and PNG images for PlantUML diagrams" 
+          commit_message: "Generate SVG and PNG images for PlantUML diagrams"
           branch: ${{ github.head_ref }}
 ```
 
