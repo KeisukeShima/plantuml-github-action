@@ -9,6 +9,6 @@ RUN apt-get -qy update && \
     DEBIAN_FRONTEND=noninteractive apt-get -yq install fonts-ipafont fonts-ipaexfont fonts-takao-gothic && \
     rm -rf /var/lib/apt/lists/*
 
-# COPY entrypoint.sh /entrypoint.sh
+COPY entrypoint.sh /entrypoint.sh
 
-# ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
